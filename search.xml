@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>第一篇博客</title>
+      <link href="/2023/11/14/post/"/>
+      <url>/2023/11/14/post/</url>
+      
+        <content type="html"><![CDATA[<h1 id="这是我的第一篇博客！"><a href="#这是我的第一篇博客！" class="headerlink" title="这是我的第一篇博客！"></a>这是我的第一篇博客！</h1>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 纪念 </tag>
+            
+            <tag> 重要瞬间 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第二篇博客</title>
+      <link href="/2023/11/14/post%20copy/"/>
+      <url>/2023/11/14/post%20copy/</url>
+      
+        <content type="html"><![CDATA[<h1 id="这是我的第二篇博客！"><a href="#这是我的第二篇博客！" class="headerlink" title="这是我的第二篇博客！"></a>这是我的第二篇博客！</h1>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 纪念 </tag>
+            
+            <tag> 重要瞬间 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
