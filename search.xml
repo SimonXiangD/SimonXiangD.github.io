@@ -4,11 +4,43 @@
   
     
     <entry>
+      <title>Serum合成器基础0-介绍</title>
+      <link href="/2024/03/10/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%800-%E4%BB%8B%E7%BB%8D/"/>
+      <url>/2024/03/10/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%800-%E4%BB%8B%E7%BB%8D/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Serum合成器教程系列"><a href="#Serum合成器教程系列" class="headerlink" title="Serum合成器教程系列"></a>Serum合成器教程系列</h1><p>本套教程主要参考Au5的Serum mastercourse，分享内容为Serum（血清）合成器的基础知识（各种按钮的含义），并不会过多涉及具体的声音塑造。</p><p>所以你可能会觉得这些内容看起来非常无聊——我完全可以理解，因为我自己看课的时候也这么觉得。但是有时候你确实需要花一些时间巩固基础，不然没有基础也看不懂各种神奇的音色的合成原理，而只会跟着教程捏Knob对长远发展意义不大…</p><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><ol><li>serum 很有用，UI 也很好。</li><li>serum 以波形合成为主，同时包含了其他各种合成（减法，fm 等）</li><li>学习 serum 并不是一个简单的过程，哪怕课程的第一部分是在讲一些概念而非如何合成音色，大部分初学者也无法只看一遍视频便领悟原理。所以，不要为自己一遍看不懂而羞愧，这非常正常。（上面的是课程里的原话，实际上我自己深有体悟。第一遍看不懂非常正常）</li></ol><h3 id="SerumFx"><a href="#SerumFx" class="headerlink" title="SerumFx"></a>SerumFx</h3><ol><li>serum 和 serumFx 不是一个东西，后者是特效，可以拖到 audio 轨道上而 serum 不行。两者都可以拖到 midi track 上。也就是说，你可以试着拉十几个serumFx，把hyper拉满看看最后出来的会不会是什么深邃到极点的声音…</li></ol><h3 id="Wavetable-Synth"><a href="#Wavetable-Synth" class="headerlink" title="Ｗavetable Synth"></a>Ｗavetable Synth</h3><ol><li>wavetable 便是 sample 源，serum 支持自定义 wavetable，甚至可以拖一张图片进去（反正都是向量），这比类似的 massive 合成器要好</li><li>当然 serum 也支持减法合成，fm 合成等等</li></ol><h3 id="Presets"><a href="#Presets" class="headerlink" title="Presets"></a>Presets</h3><ol><li>类似存档点</li><li>自己做，改，保存成新的，这个过程据 au5 说对他帮助很大</li><li>不过实际上用自己的还是用别人的只是选择，只要自己用的开心就行，毕竟弹琴不需要当木匠造琴。不用别人的不是因为羞耻心，而是因为自己享受做音色的过程；时间等的投入也需要自己平衡。放弃无谓的自豪感。</li><li>可以参考他人 preset 作为灵感</li></ol><h2 id="核心总结"><a href="#核心总结" class="headerlink" title="核心总结"></a>核心总结</h2><ol><li>用Serum不过时，它依然是最好的电子音乐音色设计软件合成器之一。 （当然如果你囊中羞涩可以用免费的vital合成器，或者试试从一些qq群组找盗版serum…）</li><li>Serum学习并不简单，需要steady and slow的态度</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 电子音乐制作 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Serum合成器基础1-振荡器</title>
+      <link href="/2024/03/10/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%801-%E6%8C%AF%E8%8D%A1%E5%99%A8/"/>
+      <url>/2024/03/10/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%801-%E6%8C%AF%E8%8D%A1%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Serum合成器教程系列"><a href="#Serum合成器教程系列" class="headerlink" title="Serum合成器教程系列"></a>Serum合成器教程系列</h1><p>教程系列的介绍可以参考第一篇。</p><p>这篇文章中，我们介绍Serum中的振荡器，大部分的声音（除去sub和noise）都是靠着振荡器产生的。</p><h3 id="振荡器"><a href="#振荡器" class="headerlink" title="振荡器"></a>振荡器</h3><ol><li>鼠标停在 serum 某个按钮&#x2F;界面不动，等一会就会有提示这是什么</li><li>振荡器就是产生声音的，不同于传统合成器，更加“虚拟”。</li><li>lfo 名字里虽然带个振荡器，那是因为它过去真的是振荡器，但 serum 中的 lfo 并不是，而是一个让声音发生变化的东西，用数学思维看则是函数或者算子</li></ol><h3 id="波形表"><a href="#波形表" class="headerlink" title="波形表"></a>波形表</h3><ol><li>serum 中波形表 ui 介绍，可以按 &lt;&gt; 来方便选择波形</li><li>wt_pos 控制波形改变（2d 坐标）</li></ol><h3 id="音调控制"><a href="#音调控制" class="headerlink" title="音调控制"></a>音调控制</h3><ol><li>在一个 wavetable 中，一共有四个 node 可以调整 pitch：</li></ol><p>OCT SEM FIN CRS</p><p>分别对应着</p><p>音阶 半音 1% 半音 连续（单位：半音 - 1）</p><p>连续的配合 lfo 使用会挺不错</p><p>离散的也有 lfo 用法，比如那种机械科技电子感</p><h3 id="Unison-and-Detune"><a href="#Unison-and-Detune" class="headerlink" title="Unison and Detune"></a>Unison and Detune</h3><ol><li>unison 可用于丰富音色，而 detune 便是将几个同样的音稍微 detune 一下（从而扩充音域，就像交响乐里各种乐器调理论一样但因为乐器不同所以这一点不同反而可以扩充音色？）</li></ol><h3 id="Blend-Phase-and-Random"><a href="#Blend-Phase-and-Random" class="headerlink" title="Blend, Phase and Random"></a>Blend, Phase and Random</h3><ol><li>blend 便是 unison 不同音的混合模式，广和尖的感觉</li><li>phase 是音启动时间，random 是 phase 的随机值。单个音的 phase 变化基本听不出来，但比如说 unison 为 2，将 detune 设为 0，rand 拉到 100，那每次即使按同一个键，也会有不同的声音（当然差别也不是特别大）。这是因为音波的干涉</li><li>random 初始为 100 的可能原因：supersaw 就需要这样。比如说把 unison 拉到 16，那 random 如果为 0 听起来就会是很不自然的声音（当然也有其的用处），而把 random 拉大后 saw 声音更加自然</li></ol><h3 id="Wavetable-position"><a href="#Wavetable-position" class="headerlink" title="Wavetable position"></a>Wavetable position</h3><ol><li>通过改变 position，将不同的波形连续地变化，就像电影其实是由不同的帧组成，而本来是独立的元素拼在一起后能让人感觉是连续的（或许这也是 growl 可以作为 drop 中不同部分的转折与衔接的原因？就像来了个快速宏伟的大场面）</li></ol><h3 id="Warp-Pan-and-Level"><a href="#Warp-Pan-and-Level" class="headerlink" title="Warp, Pan and Level"></a>Warp, Pan and Level</h3><ol><li>warp 是对 wavetable 做变换，课程之后会详细介绍每一种（比如说波形复制，镜像，像素化等等）</li><li>pan 是改变左右音道</li><li>level 是音量</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>丽德轩博客介绍</title>
       <link href="/2023/12/10/%E4%B8%BD%E5%BE%B7%E8%BD%A9%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D/"/>
       <url>/2023/12/10/%E4%B8%BD%E5%BE%B7%E8%BD%A9%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D/</url>
       
-        <content type="html"><![CDATA[<h1 id="丽德轩"><a href="#丽德轩" class="headerlink" title="丽德轩"></a>丽德轩</h1><h1 id="博客介绍"><a href="#博客介绍" class="headerlink" title="博客介绍"></a>博客介绍</h1><p>欢迎来到丽德轩，这是我分享各种有趣的知识或者日常的个人博客!</p><h2 id="在这个博客中，你可以学到："><a href="#在这个博客中，你可以学到：" class="headerlink" title="在这个博客中，你可以学到："></a>在这个博客中，你可以学到：</h2><p>制作能向全球提供服务，支持高并发的自定义商业&#x2F;个人网站；</p><p>和喜欢的虚拟角色实时语音聊天并让 TA 唱歌给你听；</p><p>按照心中所想的构图自由高效创作精美绘画；</p><p>使用 3D 建模软件给动画角色模型换头&#x2F;衣装；</p><p>使用各种 Shader 实现动画&#x2F;现实风格的 3D 动画；</p><p>让你拥有近乎绝对音感，扒谱无敌的音感训练技巧；</p><p>用减法合成器生成各种动物的声音，以及高效驱蚊的 bass 声；</p><p>以正常玩家的身份在 MC PVP 中击杀队伍联合的无敌飞行挂；</p><p>用一天时间在 MC 中建造一座建筑迥异的属于你的大城市；</p><p>……</p><h2 id="你也可以看到许多有趣的分享："><a href="#你也可以看到许多有趣的分享：" class="headerlink" title="你也可以看到许多有趣的分享："></a>你也可以看到许多有趣的分享：</h2><p>我的痛并快乐着的转码之路和心理历程；</p><p>我的十几个国家的旅游经历；</p><p>我为什么会爱上 Melodic Dubstep；</p><p>我的 3000+ 游戏时长的具体分布；</p><p>竞赛和高考相关的升学之路的感悟；</p><p>……</p><p>当然，你阅读的时候，可能我的博客还没有太多的文章。这是因为我平时也比较忙，特别是最近几年正处于先苦一苦的阶段。不过，我会坚持发完的。</p><h1 id="作者介绍"><a href="#作者介绍" class="headerlink" title="作者介绍"></a>作者介绍</h1><p>我是清华大学的一名在读本科生，即将去美国读硕士。</p><p>我对许多领域都充满了兴趣且有所尝试，包括但不限于软件开发，AI 应用，动画，音乐，游戏，阅读等。</p><p>我的联系方式：</p><p><a href="mailto:&#100;&#105;&#x72;&#x61;&#x73;&#57;&#53;&#49;&#48;&#x40;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;">&#100;&#105;&#x72;&#x61;&#x73;&#57;&#53;&#49;&#48;&#x40;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="丽德轩"><a href="#丽德轩" class="headerlink" title="丽德轩"></a>丽德轩</h1><h1 id="博客介绍"><a href="#博客介绍" class="headerlink" title="博客介绍"></a>博客介绍</h1><p>欢迎来到丽德轩，这是我分享各种有趣的知识或者日常的个人博客!</p><h2 id="在这个博客中，你可以学到："><a href="#在这个博客中，你可以学到：" class="headerlink" title="在这个博客中，你可以学到："></a>在这个博客中，你可以学到：</h2><p>制作能向全球提供服务，支持高并发的自定义商业&#x2F;个人网站；</p><p>和喜欢的虚拟角色实时语音聊天并让 TA 唱歌给你听；</p><p>按照心中所想的构图自由高效创作精美绘画；</p><p>使用 3D 建模软件给动画角色模型换头&#x2F;衣装；</p><p>使用各种 Shader 实现动画&#x2F;现实风格的 3D 动画；</p><p>让你拥有近乎绝对音感，扒谱无敌的音感训练技巧；</p><p>用减法合成器生成各种动物的声音，以及高效驱蚊的 bass 声；</p><p>以正常玩家的身份在 MC PVP 中击杀队伍联合的无敌飞行挂；</p><p>用一天时间在 MC 中建造一座建筑迥异的属于你的大城市；</p><p>……</p><h2 id="你也可以看到许多有趣的分享："><a href="#你也可以看到许多有趣的分享：" class="headerlink" title="你也可以看到许多有趣的分享："></a>你也可以看到许多有趣的分享：</h2><p>我的痛并快乐着的转码之路和心理历程；</p><p>我的十几个国家的旅游经历；</p><p>我为什么会爱上 Melodic Dubstep；</p><p>我的 3000+ 游戏时长的具体分布；</p><p>竞赛和高考相关的升学之路的感悟；</p><p>……</p><p>当然，你阅读的时候，可能我的博客还没有太多的文章。这是因为我平时也比较忙，特别是最近几年正处于先苦一苦的阶段。不过，我会坚持发完的。</p><h1 id="作者介绍"><a href="#作者介绍" class="headerlink" title="作者介绍"></a>作者介绍</h1><p>我是清华大学的一名在读本科生，即将去美国读硕士。</p><p>我对许多领域都充满了兴趣且有所尝试，包括但不限于软件开发，AI 应用，动画，音乐，游戏，阅读等。</p><p>我的联系方式：</p><p><a href="mailto:&#x64;&#105;&#x72;&#x61;&#115;&#57;&#53;&#49;&#x30;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#46;&#99;&#x6f;&#x6d;">&#x64;&#105;&#x72;&#x61;&#115;&#57;&#53;&#49;&#x30;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#46;&#99;&#x6f;&#x6d;</a></p>]]></content>
       
       
       
