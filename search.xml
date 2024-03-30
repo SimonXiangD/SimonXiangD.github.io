@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Serum合成器基础2-主面板</title>
+      <link href="/2024/03/30/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%802-%E5%89%8D%E9%9D%A2%E6%9D%BF/"/>
+      <url>/2024/03/30/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%802-%E5%89%8D%E9%9D%A2%E6%9D%BF/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Serum合成器教程系列"><a href="#Serum合成器教程系列" class="headerlink" title="Serum合成器教程系列"></a>Serum合成器教程系列</h1><p>在介绍完serum基础，和产生声音的源头振荡器后，本篇介绍serum主面板上其他的功能，比如sub，noise这两个独特的音源，以及env和lfo这类合成器中的“函数”，以及一些其他功能。</p><p>当然，本篇还是没有讲完主面板中的全部内容，比如warp和filter。它们会在之后出现。</p><h3 id="sub-振荡器"><a href="#sub-振荡器" class="headerlink" title="sub 振荡器"></a>sub 振荡器</h3><ol><li>sub 技术上就是一个振荡器，不过有更少的可选参数</li><li>可用于给 bass 铺底</li><li>DIRECT OUT：如果开启，就是不经过各种 filter fx 等直接输出，比如铺地可能就想要它单独铺出来</li></ol><h3 id="noise-振荡器"><a href="#noise-振荡器" class="headerlink" title="noise 振荡器"></a>noise 振荡器</h3><ol><li>是一个采样器</li><li>可以将 wav 拖入 audio track，使用 ctrl e 做切割处理，然后切割好后保存新的 wav，再拖入 noise 的 wav，然后频率可能得改下防止变声</li><li>箭头：是否确定为 one-shot phase：起始点 random： phase 随机程度 pitch：音调 钢琴：是否跟着钢琴变调 如果钢琴被选中，那么 pitch 变化是 semitone；否则则是 percentage， 12% 是一个 octave</li></ol><h3 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h3><ol><li>cutoff 控制频率 res 控制频率处形状 pan 左右 drive 和 fat 都是加音量 但是 drive 是 pre-filter saturation，fat 没有做 saturation，不会改变频率的（感觉？） 反正现在不太懂这是什么 之后再说吧 mix 也不太懂，还没学过混音 之后再说吧</li></ol><h3 id="Envelope-1"><a href="#Envelope-1" class="headerlink" title="Envelope 1"></a>Envelope 1</h3><ol><li>它（和其他下半板块的模块）本身不产生声音，但是对声音产生影响</li><li>是音量的结构</li><li>env1 负责整个 serum 的声音，由 adsr 控制</li><li>adsr 分别是什么？ a 是 attack，声音到最大的时长；d 是最高点下降到持续的时长；s 是下降并维持的音高；r 是释放后的停止时间  除此之外 serum 还有个 hold，代表最高处维持时间。其中 ahdr 都是横坐标的时长，s 是纵坐标的音高</li><li>拉曲线时还可以改变曲线形状</li></ol><h3 id="Envelope-2-3"><a href="#Envelope-2-3" class="headerlink" title="Envelope 2, 3"></a>Envelope 2, 3</h3><ol><li>env2 和 3 不控制整体音量，需要将它们 assign 到具体的 knob 才有影响</li><li>据 au5 说，他用 env1 基本只控制整体音量而不控制其他的</li><li>拉到 knob 上时，可以调控影响的 range，shift alt 点击 knob 切换成对称控制， 如果是负的则是逆时针（从指针开始到最远处），如果是对称，方向则根据 shift alt 对称前的方向（正 or 负）决定走向</li><li>一个 env 最多控制 32 个 knob，3 个 env 似乎是不太够的，于是之后还会有 lfo</li></ol><h3 id="LFO"><a href="#LFO" class="headerlink" title="LFO"></a>LFO</h3><ol><li>LFO 的最高点和最低点便是 lfo 的范围两端点，方向正负控制和上一节提到的控制方法一样</li></ol><h3 id="LFO-控制器"><a href="#LFO-控制器" class="headerlink" title="LFO 控制器"></a>LFO 控制器</h3><ol><li>rate  控制 lfo 周期时长</li><li>rise 渐进式的 lfo 启动 delay 时长结束再启动 lfo</li><li>smooth</li><li>bpm 跟着 daw 的 bpm 走还是跟着独立的数字频率</li><li>anchor 保证 rate 改变时 phase 也跟着改，为了确保 rate 变动时 lfo stay sync with beat 说实话这里没太懂</li><li>trip 在 rate 中添加更多的 subdivision 选择</li><li>dot 同上</li><li>off 每次新的开始地点都是上次的结尾</li><li>trig 总是从 lfo 最左边开始</li><li>env 让 lfo 不循环而只运行一次，像 envelope 一样</li><li>最多可以有 8 个 lfo</li><li>在曲线上双击增加点，可以拉曲线</li><li>按住 shift 直接画横线</li><li>grid 控制横线单元格数量</li><li>按住 alt shift，y 坐标也变成离散的</li><li>lfo 也可以读取和保存 preset</li><li>lfo rate 拉到最右 fast 速率是多少？ 据 au5 说可能是 512</li></ol><h3 id="Macro-和-mod"><a href="#Macro-和-mod" class="headerlink" title="Macro 和 mod"></a>Macro 和 mod</h3><ol><li>可以将 mod 的 knob 拉到别的上面，然后控制 mod 就是控制一大堆 knob</li><li>目的是将一大堆参数整合成一个 package 来做 mod</li><li>可以用键盘控制 mod</li></ol><h3 id="Voicing"><a href="#Voicing" class="headerlink" title="Voicing"></a>Voicing</h3><ol><li>mono 只能弹一个键</li><li>poly 可以同时弹的数量（超过的话取最近弹的三个） unison 的也算，不过 unison 变大，poly 上限也会变大 unison 拉满时最多是 1088</li><li>porta 音不够时转变的速率 curve 转变曲线</li><li>always 如果开了，那么 mono 下哪怕两个不同的音分开，它们也会连续转变；scaled 如果开了那么跳 2 个 sacle 时间比跳一个 scale 更长</li><li>legato 如果开了那么各种 lfo，env，mod 都会继续而非重新被 trigger</li></ol><h3 id="Pitch-bend-和右键选项"><a href="#Pitch-bend-和右键选项" class="headerlink" title="Pitch bend 和右键选项"></a>Pitch bend 和右键选项</h3><ol><li>pitch bend 翻译是弯音</li><li>两个上下界调整范围，大小没有要求上大下小，上小下大也可以</li><li>ctrl 左键 一个 knob 可以让它初始化 或者右键选择 reset control 也行</li><li>右键选择 mod source 可以避免 drag 因为有的可能是拖不到的比如 lfo 到另一个 lfo 的参数</li></ol><h3 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h3><ol><li>可以选择皮肤  不同皮肤带来的不同感觉可能真的会对创作有影响</li><li>可以放大 放大后分辨率提高还挺细致的</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>本地vs code c++环境配置</title>
       <link href="/2024/03/28/%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0lt%20cpp%E7%8E%AF%E5%A2%83/"/>
       <url>/2024/03/28/%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0lt%20cpp%E7%8E%AF%E5%A2%83/</url>
@@ -42,7 +55,7 @@
     
     
     <entry>
-      <title>Serum合成器基础1-振荡器</title>
+      <title>Serum合成器基础1-波表振荡器</title>
       <link href="/2024/01/15/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%801-%E6%8C%AF%E8%8D%A1%E5%99%A8/"/>
       <url>/2024/01/15/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%801-%E6%8C%AF%E8%8D%A1%E5%99%A8/</url>
       
