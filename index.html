@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>丽德轩 - Dirnot的个人博客</title><meta name="author" content="Dirnot"><meta name="copyright" content="Dirnot"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="改变自己！">
+<meta property="og:type" content="website">
+<meta property="og:title" content="丽德轩">
+<meta property="og:url" content="https://simonxiangd.github.io/index.html">
+<meta property="og:site_name" content="丽德轩">
+<meta property="og:description" content="改变自己！">
+<meta property="og:locale">
+<meta property="og:image" content="https://simonxiangd.github.io/img/butterfly-icon.png">
+<meta property="article:author" content="Dirnot">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://simonxiangd.github.io/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "丽德轩",
+  "url": "https://simonxiangd.github.io/"
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://simonxiangd.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '丽德轩',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.0.0"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">丽德轩</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">丽德轩</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/08/01/%E6%88%91%E7%9A%84%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF-02-%E5%B9%B6%E4%B8%8D%E9%A1%BA%E5%88%A9%E7%9A%84%E7%A3%95%E7%A3%95%E7%A2%B0%E7%A2%B0/" title="我的转码之路-02-并不顺利的磕磕碰碰">我的转码之路-02-并不顺利的磕磕碰碰</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-08-01T21:02:11.000Z" title="Created 2025-08-01 17:02:11">2025-08-01</time></span></div><div class="content">我的转码之路 - 02我为什么又开始碰代码上一回说到，初高中的cs课程给我带来了美好的和bro们打游戏的回忆但并没有带来任何知识，本科的第一门cs课带来的也只有痛苦。那么我为什么又要去碰代码吗？ 我并不是M，再次写代码其实是出于自身的兴趣。当时我在学习做动画，而做动画需要写shader，就算不自己写完整的pbr和npr pipeline，至少也要会读懂到能够调参的程度吧。于是我找到一个学长给我推荐，然后开始读虎书和unity shader实战。然后我做动画的水平有点起色但是不多。（这是因为，做动画本身是很吃审美和艺术功底的事，比如颜色的搭配、场景人物选择等更加重要但是我没意识到，就像炒菜，最终动画是炒完的菜，计算机是热源，人物和场景模型是蔬菜肉，调色是调料，而底层框架是各种锅）我当时就在研究锅的做法（比如平底，砂锅，铁锅等），但是要做出好动画，需要各方面的协调，哪一方面出问题了都会失败，锅只是其中一个要素。做动画是非常难的事情，甚至这一个事实都是我毕业后才意识到的。 不过说回正题，为了做我感兴趣的动画，我就继续写代码了。同时，当时ai正在发展但是还没有出现chatgpt，我对语音...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/08/01/%E9%9A%8F%E4%BE%BF%E5%86%99%E4%B8%80%E4%BA%9B%E6%84%9F%E6%83%B3/" title="随便写一些感想">随便写一些感想</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-08-01T19:35:16.000Z" title="Created 2025-08-01 15:35:16">2025-08-01</time></span></div><div class="content">碎碎念恢复更新好久没有更新了。今天想写些东西，却发现，我勒个，我repo呢？原来在我老电脑上但是只有deploy的repo更新了，代码仓库没上传。于是用copilot赶紧把之前的几篇博客恢复一下。 之前一直没更新的原因是忙于各种事，或许是研究，或许是实习，或许是单纯的游戏。现在恢复更新。 又过一年，各种失败来美国也快一年了。这一年里似乎发生了很多事，又似乎什么都没发生。不过这一年里最大的收货，怕不是进一步认清了自己？还有几个失败的项目。这一年情绪波动也不多，但感觉影响其实挺大的。我记得刚来美国时斗志昂扬，但是现在少了一分激情，多了一分理智。 确实，这一年我没有什么成就。不管是科研还是工作上。科研上开启的四个项目，两个个人主导的都没什么意义，一个合作的被拒了两次，还有一个正在开发但是做下去的动力也不多了。刚决定做research时想要发四五篇文章的幻想被戳破，但其实我写这个的时候并没有很失落，因为发现现阶段我确实不适合做research，同时我选择的方向也不那么好出成果。而且还有各方面的原因。意气风发有时是无知的代名词，而认清自己的失败和失败的原因听起来不光彩，却是更进一步的必经之...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/04/01/%E6%88%91%E7%9A%84%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF-01-%E4%BB%8E%E6%86%8E%E6%81%B6%E4%BB%A3%E7%A0%81%E5%BC%80%E5%A7%8B/" title="我的转码之路-01 从憎恶代码开始">我的转码之路-01 从憎恶代码开始</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-04-01T19:20:32.000Z" title="Created 2024-04-01 15:20:32">2024-04-01</time></span></div><div class="content">序今天，弹琴时发现自己的音乐学习之旅又遇到瓶颈了，而这次的瓶颈很可能需要通过一种我都不曾意料到的方式解决————写歌词。其实未必要写多么押韵的歌词，而是要把情感确定了，现有情感再去写歌表达，而非以往的先写歌然后赋予情感。当然不提前后方法的正确性，总之我需要再次发掘感情了，可能是之前忙着找实习被磨灭了不少内心的热情。 于是干脆写一个回忆，关于我的转码之路的。在我看来，这是一条艰难却又是我必然选择的路。即使我被坑着直博再读五年数学，我估计直博期间或者毕业后还是要转码。而我的经历或许也能给一些和我有着类似想法的人提供一些参考，如果我在去年现在能得到这些参考，那么我也或许能少走一些弯路。对自己有益，对他人也有益，为何不写呢？ 正文我的转码之路 - 01我的第一，二，三次写代码的经历不同于一些年少成名的天才，我接触代码的时间不早，而且我一开始对代码没有表露出任何的兴趣。第一次写代码是在小学高年级的微机课上，当时教的是pascal。但是我一句都不会写，作业全靠抄，课上电脑被控制时就和同学聊天或者玩，电脑不被控制了就打游戏。 我第二次写代码是初中，同样微机课，不过教授内容变成了c++。而我也有...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/30/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%803-%E9%87%87%E6%A0%B7%E5%BD%A2%E5%8F%98/" title="Serum合成器基础3-采样形变">Serum合成器基础3-采样形变</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-30T19:18:06.000Z" title="Created 2024-03-30 15:18:06">2024-03-30</time></span></div><div class="content">Serum合成器教程系列本文标题的采样形变，指的是对波形进行直接变换。不同于减法合成，我们直接对波形进行变化。除了一些复制，翻转，缩变，我们还可以使用fm和am方法。 这部分的原理挺复杂的，特别是FM，我觉得可以去youtube找几个视频看一看，或者上reddit，比如有一些链接可以参考。（我自己之前看了几遍都没看懂…最近主业稍微可以闲一下，抱着好心情去认真看才看懂一些）如果暂时看不懂，很正常，以后心情好了再来看就行了。 reddit回答帖 带声音示范的文章 Sync sync no window 调整波形 看上去和频率调控很类似，区别在于 pitch 是直接改变波形音调，而 sync 是强制在频率里每次刷新重新播放波形，比如 2.5 的 110hz 的 A 就是每分钟刷新 110 次，每次里先两次波形再一次半波形 sync 1&#x2F;2 window 对边缘做平滑 听起来更加 blurred 比如说没有一些呲呲的电子杂音 sync window 整个做平滑  Bend 和 PWM bend 扭曲波形，加是让函数（取绝对值后）向两边靠，减是向中间 bend 让低频高频都能听到...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/30/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%802-%E4%B8%BB%E9%9D%A2%E6%9D%BF/" title="Serum合成器基础2-主面板">Serum合成器基础2-主面板</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-30T19:12:42.000Z" title="Created 2024-03-30 15:12:42">2024-03-30</time></span></div><div class="content">Serum合成器教程系列在介绍完serum基础，和产生声音的源头振荡器后，本篇介绍serum主面板上其他的功能，比如sub，noise这两个独特的音源，以及env和lfo这类合成器中的“函数”，以及一些其他功能。 当然，本篇还是没有讲完主面板中的全部内容，比如warp和filter。它们会在之后出现。 sub 振荡器 sub 技术上就是一个振荡器，不过有更少的可选参数 可用于给 bass 铺底 DIRECT OUT：如果开启，就是不经过各种 filter fx 等直接输出，比如铺地可能就想要它单独铺出来  noise 振荡器 是一个采样器 可以将 wav 拖入 audio track，使用 ctrl e 做切割处理，然后切割好后保存新的 wav，再拖入 noise 的 wav，然后频率可能得改下防止变声 箭头：是否确定为 one-shot phase：起始点 random： phase 随机程度 pitch：音调 钢琴：是否跟着钢琴变调 如果钢琴被选中，那么 pitch 变化是 semitone；否则则是 percentage， 12% 是一个 octave  Filter cu...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/28/%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0lt%20cpp%E7%8E%AF%E5%A2%83/" title="本地vs code c++环境配置">本地vs code c++环境配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-29T02:36:31.000Z" title="Created 2024-03-28 22:36:31">2024-03-28</time></span></div><div class="content">Windows系统 本地 VS Code 配置 C++ 环境本地配置的目的看到这个博客肯定就有人要问了：德同学你何苦要本地vs code配置c++环境呢？如果是大项目，好好的visual studio不用来用vs code，如果就是写点简单算法题，力扣网站直接刷不好吗，非要自讨麻烦。 实际上我以前就是这么想的，但是今天发现本地配置还是有意义的————因为要面试，然后发现可能要在本地跑代码，而visual studio每次打开都要不少时间，挺麻烦的，相比之下vs code好很多。而面试的时候可能并不会同意让你打开力扣当c++环境。 配置过程也不长，十五分钟的事。所以不妨配置一个，写起代码手感不得不说远超干巴巴的leetcode网页版。但之前就故意为了练这个没配… 配置过程下载MINGW首先下载 MINGW， 看这个帖子里有图片的赞数最多的那个回答就够了。 实际上就是下载压缩包（地址），解压后放到一个目录里，然后系统变量加一下。 搞完以后，cmd试试 123gcc --version  输出没问题就是安装好了。 配置VS Code其实配置VS code的部分有一篇文章我觉得很好，那就...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/02/15/%E5%88%B6%E4%BD%9C%E7%AE%80%E5%8D%95%E7%9A%84chatbot/" title="制作简单的chatbot">制作简单的chatbot</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-02-16T03:18:33.000Z" title="Created 2024-02-15 22:18:33">2024-02-15</time></span></div><div class="content">制作简单的 ChatbotChatbot 是什么Chatbot，聊天机器人。有各种各样的聊天机器人，用于不同的场景，比如网站上的机器客服就是一个例子。我最近还看到一个新闻，一个公司裁了 700&#x2F;3000 人工客服并使用 AI 克服替换，便是 Chatbot 的应用。 而我们也可以搭建各种各样的 Chatbot，比如搭建虚拟伴侣等。这篇文章中，我们便以搭建虚拟助手为例，搭建一个 chatbot 助手。 Chatbot 的结构Chatbot 的结构很简单，前端展示，后端服务，算法接口。 前端展示便是对话框，语音播放框之类的，可以使用 React 这样的框架实现； 后端服务便是前端调取的接口，负责业务逻辑，同时需要连接算法接口，可以使用 SpringBoot 或者 Python Flask 等实现； 算法接口，这个是最难的，但是我们先不考虑自己训练 AI 模型，我们采用简单一些的办法，那就是调用一些付费或者开源的大模型接口，并采用 prompt engineering 来生成指令。 本篇文章出于方便，就直接使用 python gradio 搭建 chatbot 了，它可以直接...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/15/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%801-%E6%8C%AF%E8%8D%A1%E5%99%A8/" title="Serum合成器基础1-振荡器">Serum合成器基础1-振荡器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-15T15:23:11.000Z" title="Created 2024-01-15 10:23:11">2024-01-15</time></span></div><div class="content">Serum合成器教程系列教程系列的介绍可以参考第一篇。 这篇文章中，我们介绍Serum中的振荡器，大部分的声音（除去sub和noise）都是靠着振荡器产生的。 振荡器 鼠标停在 serum 某个按钮&#x2F;界面不动，等一会就会有提示这是什么 振荡器就是产生声音的，不同于传统合成器，更加“虚拟”。 lfo 名字里虽然带个振荡器，那是因为它过去真的是振荡器，但 serum 中的 lfo 并不是，而是一个让声音发生变化的东西，用数学思维看则是函数或者算子  波形表 serum 中波形表 ui 介绍，可以按 &lt;&gt; 来方便选择波形 wt_pos 控制波形改变（2d 坐标）  音调控制 在一个 wavetable 中，一共有四个 node 可以调整 pitch：  OCT SEM FIN CRS 分别对应着 音阶 半音 1% 半音 连续（单位：半音 - 1） 连续的配合 lfo 使用会挺不错 离散的也有 lfo 用法，比如那种机械科技电子感 Unison and Detune unison 可用于丰富音色，而 detune 便是将几个同样的音稍微 detune 一下（从而扩充...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/08/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%800-%E4%BB%8B%E7%BB%8D/" title="Serum合成器基础0-介绍">Serum合成器基础0-介绍</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-08T19:56:51.000Z" title="Created 2024-01-08 14:56:51">2024-01-08</time></span></div><div class="content">Serum合成器教程系列本套教程主要参考Au5的Serum mastercourse，分享内容为Serum（血清）合成器的基础知识（各种按钮的含义），并不会过多涉及具体的声音塑造。 所以你可能会觉得这些内容看起来非常无聊——我完全可以理解，因为我自己看课的时候也这么觉得。但是有时候你确实需要花一些时间巩固基础，不然没有基础也看不懂各种神奇的音色的合成原理，而只会跟着教程捏Knob对长远发展意义不大… 介绍 serum 很有用，UI 也很好。 serum 以波形合成为主，同时包含了其他各种合成（减法，fm 等） 学习 serum 并不是一个简单的过程，哪怕课程的第一部分是在讲一些概念而非如何合成音色，大部分初学者也无法只看一遍视频便领悟原理。所以，不要为自己一遍看不懂而羞愧，这非常正常。（上面的是课程里的原话，实际上我自己深有体悟。第一遍看不懂非常正常）  SerumFx serum 和 serumFx 不是一个东西，后者是特效，可以拖到 audio 轨道上而 serum 不行。两者都可以拖到 midi track 上。也就是说，你可以试着拉十几个serumFx，把hyper拉满看...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/11/04/%E4%B8%BD%E5%BE%B7%E8%BD%A9%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D/" title="丽德轩博客介绍">丽德轩博客介绍</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-11-04T18:08:14.000Z" title="Created 2023-11-04 14:08:14">2023-11-04</time></span></div><div class="content">丽德轩博客介绍欢迎来到丽德轩，这是我分享各种有趣的知识或者日常的个人博客! 在这个博客中，你可以学到：制作能向全球提供服务，支持高并发的自定义商业&#x2F;个人网站； 和喜欢的虚拟角色实时语音聊天并让 TA 唱歌给你听； 按照心中所想的构图自由高效创作精美绘画； 使用 3D 建模软件给动画角色模型换头&#x2F;衣装； 使用各种 Shader 实现动画&#x2F;现实风格的 3D 动画； 让你拥有近乎绝对音感，扒谱无敌的音感训练技巧； 用减法合成器生成各种动物的声音，以及高效驱蚊的 bass 声； 以正常玩家的身份在 MC PVP 中击杀队伍联合的无敌飞行挂； 用一天时间在 MC 中建造一座建筑迥异的属于你的大城市； …… 你也可以看到许多有趣的分享：我的痛并快乐着的转码之路和心理历程； 我的十几个国家的旅游经历； 我为什么会爱上 Melodic Dubstep； 我的 3000+ 游戏时长的具体分布； 竞赛和高考相关的升学之路的感悟； …… 当然，你阅读的时候，可能我的博客还没有太多的文章。这是因为我平时也比较忙，特别是最近几年正处于先苦一苦的阶段。不过，我会坚持发完的。 作...</div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Dirnot</div><div class="author-info-description">改变自己！</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/01/%E6%88%91%E7%9A%84%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF-02-%E5%B9%B6%E4%B8%8D%E9%A1%BA%E5%88%A9%E7%9A%84%E7%A3%95%E7%A3%95%E7%A2%B0%E7%A2%B0/" title="我的转码之路-02-并不顺利的磕磕碰碰">我的转码之路-02-并不顺利的磕磕碰碰</a><time datetime="2025-08-01T21:02:11.000Z" title="Created 2025-08-01 17:02:11">2025-08-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/01/%E9%9A%8F%E4%BE%BF%E5%86%99%E4%B8%80%E4%BA%9B%E6%84%9F%E6%83%B3/" title="随便写一些感想">随便写一些感想</a><time datetime="2025-08-01T19:35:16.000Z" title="Created 2025-08-01 15:35:16">2025-08-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/01/%E6%88%91%E7%9A%84%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF-01-%E4%BB%8E%E6%86%8E%E6%81%B6%E4%BB%A3%E7%A0%81%E5%BC%80%E5%A7%8B/" title="我的转码之路-01 从憎恶代码开始">我的转码之路-01 从憎恶代码开始</a><time datetime="2024-04-01T19:20:32.000Z" title="Created 2024-04-01 15:20:32">2024-04-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/30/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%803-%E9%87%87%E6%A0%B7%E5%BD%A2%E5%8F%98/" title="Serum合成器基础3-采样形变">Serum合成器基础3-采样形变</a><time datetime="2024-03-30T19:18:06.000Z" title="Created 2024-03-30 15:18:06">2024-03-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/30/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%802-%E4%B8%BB%E9%9D%A2%E6%9D%BF/" title="Serum合成器基础2-主面板">Serum合成器基础2-主面板</a><time datetime="2024-03-30T19:12:42.000Z" title="Created 2024-03-30 15:12:42">2024-03-30</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/c/" style="font-size: 1.1em; color: #999">c++</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D-%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB/" style="font-size: 1.1em; color: #999">博客介绍 推荐阅读</a> <a href="/tags/%E7%BB%8F%E5%8E%86%E5%88%86%E4%BA%AB/" style="font-size: 1.5em; color: #99a9bf">经历分享</a> <a href="/tags/%E7%94%B5%E5%AD%90%E9%9F%B3%E4%B9%90%E5%88%B6%E4%BD%9C/" style="font-size: 1.5em; color: #99a9bf">电子音乐制作</a> <a href="/tags/chatbot/" style="font-size: 1.1em; color: #999">chatbot</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/08/">
+            <span class="card-archive-list-date">
+              August 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/04/">
+            <span class="card-archive-list-date">
+              April 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/03/">
+            <span class="card-archive-list-date">
+              March 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/02/">
+            <span class="card-archive-list-date">
+              February 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/01/">
+            <span class="card-archive-list-date">
+              January 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/11/">
+            <span class="card-archive-list-date">
+              November 2023
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">10</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-08-01T21:33:30.434Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By Dirnot</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.0.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

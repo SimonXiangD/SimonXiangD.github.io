@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>我的转码之路-02-并不顺利的磕磕碰碰 | 丽德轩</title><meta name="author" content="Dirnot"><meta name="copyright" content="Dirnot"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="我的转码之路 - 02我为什么又开始碰代码上一回说到，初高中的cs课程给我带来了美好的和bro们打游戏的回忆但并没有带来任何知识，本科的第一门cs课带来的也只有痛苦。那么我为什么又要去碰代码吗？ 我并不是M，再次写代码其实是出于自身的兴趣。当时我在学习做动画，而做动画需要写shader，就算不自己写完整的pbr和npr pipeline，至少也要会读懂到能够调参的程度吧。于是我找到一个学长给我推荐">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的转码之路-02-并不顺利的磕磕碰碰">
+<meta property="og:url" content="https://simonxiangd.github.io/2025/08/01/%E6%88%91%E7%9A%84%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF-02-%E5%B9%B6%E4%B8%8D%E9%A1%BA%E5%88%A9%E7%9A%84%E7%A3%95%E7%A3%95%E7%A2%B0%E7%A2%B0/index.html">
+<meta property="og:site_name" content="丽德轩">
+<meta property="og:description" content="我的转码之路 - 02我为什么又开始碰代码上一回说到，初高中的cs课程给我带来了美好的和bro们打游戏的回忆但并没有带来任何知识，本科的第一门cs课带来的也只有痛苦。那么我为什么又要去碰代码吗？ 我并不是M，再次写代码其实是出于自身的兴趣。当时我在学习做动画，而做动画需要写shader，就算不自己写完整的pbr和npr pipeline，至少也要会读懂到能够调参的程度吧。于是我找到一个学长给我推荐">
+<meta property="og:locale">
+<meta property="og:image" content="https://simonxiangd.github.io/img/butterfly-icon.png">
+<meta property="article:published_time" content="2025-08-01T21:02:11.000Z">
+<meta property="article:modified_time" content="2025-08-01T21:20:55.965Z">
+<meta property="article:author" content="Dirnot">
+<meta property="article:tag" content="经历分享">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://simonxiangd.github.io/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "我的转码之路-02-并不顺利的磕磕碰碰",
+  "url": "https://simonxiangd.github.io/2025/08/01/%E6%88%91%E7%9A%84%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF-02-%E5%B9%B6%E4%B8%8D%E9%A1%BA%E5%88%A9%E7%9A%84%E7%A3%95%E7%A3%95%E7%A2%B0%E7%A2%B0/",
+  "image": "https://simonxiangd.github.io/img/butterfly-icon.png",
+  "datePublished": "2025-08-01T21:02:11.000Z",
+  "dateModified": "2025-08-01T21:20:55.965Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Dirnot",
+      "url": "https://simonxiangd.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://simonxiangd.github.io/2025/08/01/%E6%88%91%E7%9A%84%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF-02-%E5%B9%B6%E4%B8%8D%E9%A1%BA%E5%88%A9%E7%9A%84%E7%A3%95%E7%A3%95%E7%A2%B0%E7%A2%B0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '我的转码之路-02-并不顺利的磕磕碰碰',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.0.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">丽德轩</span></a><a class="nav-page-title" href="/"><span class="site-name">我的转码之路-02-并不顺利的磕磕碰碰</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">我的转码之路-02-并不顺利的磕磕碰碰</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-08-01T21:02:11.000Z" title="Created 2025-08-01 17:02:11">2025-08-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-08-01T21:20:55.965Z" title="Updated 2025-08-01 17:20:55">2025-08-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="我的转码之路-02"><a href="#我的转码之路-02" class="headerlink" title="我的转码之路 - 02"></a>我的转码之路 - 02</h2><h3 id="我为什么又开始碰代码"><a href="#我为什么又开始碰代码" class="headerlink" title="我为什么又开始碰代码"></a>我为什么又开始碰代码</h3><p>上一回说到，初高中的cs课程给我带来了美好的和bro们打游戏的回忆但并没有带来任何知识，本科的第一门cs课带来的也只有痛苦。那么我为什么又要去碰代码吗？</p>
+<p>我并不是M，再次写代码其实是出于自身的兴趣。当时我在学习做动画，而做动画需要写shader，就算不自己写完整的pbr和npr pipeline，至少也要会读懂到能够调参的程度吧。于是我找到一个学长给我推荐，然后开始读虎书和unity shader实战。然后我做动画的水平有点起色但是不多。（这是因为，做动画本身是很吃审美和艺术功底的事，比如颜色的搭配、场景人物选择等更加重要但是我没意识到，就像炒菜，最终动画是炒完的菜，计算机是热源，人物和场景模型是蔬菜肉，调色是调料，而底层框架是各种锅）我当时就在研究锅的做法（比如平底，砂锅，铁锅等），但是要做出好动画，需要各方面的协调，哪一方面出问题了都会失败，锅只是其中一个要素。做动画是非常难的事情，甚至这一个事实都是我毕业后才意识到的。</p>
+<p>不过说回正题，为了做我感兴趣的动画，我就继续写代码了。同时，当时ai正在发展但是还没有出现chatgpt，我对语音克隆的项目很感兴趣，因为有喜欢的角色的声线想要复制。所以就用colab跑模型，学了一些命令行操作。我意识到代码没那么讨厌，之前讨厌它单纯是基础不行加上你清fly bitch式教学方法的锅。</p>
+<p>同时，到我大二下-大三上这个时期，当时我正处于职业发展关键点的选择，当时我有两个选择，直博数学或者出国转码。我大三上时找了个数学系的老师，因为我看到他经历里有做图像处理相关的，和我感兴趣的有所匹配。于是我找了他，他和我聊了聊并给我论文看，然后我发现，我靠，这图像处理和我想象的有点不同啊，怎么是用偏微分方程做，在我感兴趣的metrics上还不如深度学习（比如生成）？毕业后去医院待遇不错又是啥？论文读着无趣，而我当时已经觉得学数学虽然不难受但是无聊无用，而我认知里中国搞数学搞到最厉害（both学术和权势）的人yau，也是天赋拉满，读书期间每天卷十几小时，但是年轻时赚钱还是要靠学校发的福利在波士顿炒房，一把年纪了还要写信给XXX，在学校里搞教学，不得清闲，而且创办求真书院虽然是真挚爱国之举但也客观上祸害了一些被家长推入火坑的懵懂单纯少年。他搞得很有激情，但是这完全不是我想过的人生。我对数学没用那么大的兴趣，而用数学赚钱，和其他行业相比也难度大效率低。何况我每天看树洞都能看到抑郁的老博士，也有数学系自杀的和知名的精神略微失常的六教老哥，我感觉，如果我不转码跑路，说不定以后我也要精神失常登上树洞热榜了。所以我赶紧跑路了。（不过当时那个老师人很好，知道我要跑路后也没有直接不理我，而是鼓励了我一波）</p>
+<p>当然现在来看，转码的选择并非最优解，最优解或许是做下数学暑研然后申到美国top phd再转码跑路。但我当时并没有这样的认知，而且即使有，我也不会做这样的选择，一方面是坑了国内国外的导师，另一方面自己也不舒服，要做自己不喜欢的事情，而且这条路也不好走的。至少，我现在对我之前转码的选择并不后悔，甚至略带骄傲。</p>
+<p>总之，无论是兴趣还是事业，都告诉我，我需要再次碰代码了。不过不同于大一上程设时深恶痛绝的态度，而是以主动、开心的态度去碰。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://simonxiangd.github.io">Dirnot</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://simonxiangd.github.io/2025/08/01/%E6%88%91%E7%9A%84%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF-02-%E5%B9%B6%E4%B8%8D%E9%A1%BA%E5%88%A9%E7%9A%84%E7%A3%95%E7%A3%95%E7%A2%B0%E7%A2%B0/">https://simonxiangd.github.io/2025/08/01/%E6%88%91%E7%9A%84%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF-02-%E5%B9%B6%E4%B8%8D%E9%A1%BA%E5%88%A9%E7%9A%84%E7%A3%95%E7%A3%95%E7%A2%B0%E7%A2%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BB%8F%E5%8E%86%E5%88%86%E4%BA%AB/">经历分享</a></div><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2025/08/01/%E9%9A%8F%E4%BE%BF%E5%86%99%E4%B8%80%E4%BA%9B%E6%84%9F%E6%83%B3/" title="随便写一些感想"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">随便写一些感想</div></div><div class="info-2"><div class="info-item-1">碎碎念恢复更新好久没有更新了。今天想写些东西，却发现，我勒个，我repo呢？原来在我老电脑上但是只有deploy的repo更新了，代码仓库没上传。于是用copilot赶紧把之前的几篇博客恢复一下。 之前一直没更新的原因是忙于各种事，或许是研究，或许是实习，或许是单纯的游戏。现在恢复更新。 又过一年，各种失败来美国也快一年了。这一年里似乎发生了很多事，又似乎什么都没发生。不过这一年里最大的收货，怕不是进一步认清了自己？还有几个失败的项目。这一年情绪波动也不多，但感觉影响其实挺大的。我记得刚来美国时斗志昂扬，但是现在少了一分激情，多了一分理智。 确实，这一年我没有什么成就。不管是科研还是工作上。科研上开启的四个项目，两个个人主导的都没什么意义，一个合作的被拒了两次，还有一个正在开发但是做下去的动力也不多了。刚决定做research时想要发四五篇文章的幻想被戳破，但其实我写这个的时候并没有很失落，因为发现现阶段我确实不适合做research，同时我选择的方向也不那么好出成果。而且还有各方面的原因。意气风发有时是无知的代名词，而认清自己的失败和失败的原因听起来不光彩，却是更进一步的必经之...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2024/04/01/%E6%88%91%E7%9A%84%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF-01-%E4%BB%8E%E6%86%8E%E6%81%B6%E4%BB%A3%E7%A0%81%E5%BC%80%E5%A7%8B/" title="我的转码之路-01 从憎恶代码开始"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-01</div><div class="info-item-2">我的转码之路-01 从憎恶代码开始</div></div><div class="info-2"><div class="info-item-1">序今天，弹琴时发现自己的音乐学习之旅又遇到瓶颈了，而这次的瓶颈很可能需要通过一种我都不曾意料到的方式解决————写歌词。其实未必要写多么押韵的歌词，而是要把情感确定了，现有情感再去写歌表达，而非以往的先写歌然后赋予情感。当然不提前后方法的正确性，总之我需要再次发掘感情了，可能是之前忙着找实习被磨灭了不少内心的热情。 于是干脆写一个回忆，关于我的转码之路的。在我看来，这是一条艰难却又是我必然选择的路。即使我被坑着直博再读五年数学，我估计直博期间或者毕业后还是要转码。而我的经历或许也能给一些和我有着类似想法的人提供一些参考，如果我在去年现在能得到这些参考，那么我也或许能少走一些弯路。对自己有益，对他人也有益，为何不写呢？ 正文我的转码之路 - 01我的第一，二，三次写代码的经历不同于一些年少成名的天才，我接触代码的时间不早，而且我一开始对代码没有表露出任何的兴趣。第一次写代码是在小学高年级的微机课上，当时教的是pascal。但是我一句都不会写，作业全靠抄，课上电脑被控制时就和同学聊天或者玩，电脑不被控制了就打游戏。 我第二次写代码是初中，同样微机课，不过教授内容变成了c++。而我也有...</div></div></div></a><a class="pagination-related" href="/2025/08/01/%E9%9A%8F%E4%BE%BF%E5%86%99%E4%B8%80%E4%BA%9B%E6%84%9F%E6%83%B3/" title="随便写一些感想"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-08-01</div><div class="info-item-2">随便写一些感想</div></div><div class="info-2"><div class="info-item-1">碎碎念恢复更新好久没有更新了。今天想写些东西，却发现，我勒个，我repo呢？原来在我老电脑上但是只有deploy的repo更新了，代码仓库没上传。于是用copilot赶紧把之前的几篇博客恢复一下。 之前一直没更新的原因是忙于各种事，或许是研究，或许是实习，或许是单纯的游戏。现在恢复更新。 又过一年，各种失败来美国也快一年了。这一年里似乎发生了很多事，又似乎什么都没发生。不过这一年里最大的收货，怕不是进一步认清了自己？还有几个失败的项目。这一年情绪波动也不多，但感觉影响其实挺大的。我记得刚来美国时斗志昂扬，但是现在少了一分激情，多了一分理智。 确实，这一年我没有什么成就。不管是科研还是工作上。科研上开启的四个项目，两个个人主导的都没什么意义，一个合作的被拒了两次，还有一个正在开发但是做下去的动力也不多了。刚决定做research时想要发四五篇文章的幻想被戳破，但其实我写这个的时候并没有很失落，因为发现现阶段我确实不适合做research，同时我选择的方向也不那么好出成果。而且还有各方面的原因。意气风发有时是无知的代名词，而认清自己的失败和失败的原因听起来不光彩，却是更进一步的必经之...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Dirnot</div><div class="author-info-description">改变自己！</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF-02"><span class="toc-number">1.</span> <span class="toc-text">我的转码之路 - 02</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%88%E5%BC%80%E5%A7%8B%E7%A2%B0%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.</span> <span class="toc-text">我为什么又开始碰代码</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/01/%E6%88%91%E7%9A%84%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF-02-%E5%B9%B6%E4%B8%8D%E9%A1%BA%E5%88%A9%E7%9A%84%E7%A3%95%E7%A3%95%E7%A2%B0%E7%A2%B0/" title="我的转码之路-02-并不顺利的磕磕碰碰">我的转码之路-02-并不顺利的磕磕碰碰</a><time datetime="2025-08-01T21:02:11.000Z" title="Created 2025-08-01 17:02:11">2025-08-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/01/%E9%9A%8F%E4%BE%BF%E5%86%99%E4%B8%80%E4%BA%9B%E6%84%9F%E6%83%B3/" title="随便写一些感想">随便写一些感想</a><time datetime="2025-08-01T19:35:16.000Z" title="Created 2025-08-01 15:35:16">2025-08-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/01/%E6%88%91%E7%9A%84%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF-01-%E4%BB%8E%E6%86%8E%E6%81%B6%E4%BB%A3%E7%A0%81%E5%BC%80%E5%A7%8B/" title="我的转码之路-01 从憎恶代码开始">我的转码之路-01 从憎恶代码开始</a><time datetime="2024-04-01T19:20:32.000Z" title="Created 2024-04-01 15:20:32">2024-04-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/30/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%803-%E9%87%87%E6%A0%B7%E5%BD%A2%E5%8F%98/" title="Serum合成器基础3-采样形变">Serum合成器基础3-采样形变</a><time datetime="2024-03-30T19:18:06.000Z" title="Created 2024-03-30 15:18:06">2024-03-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/30/Serum%E5%90%88%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%802-%E4%B8%BB%E9%9D%A2%E6%9D%BF/" title="Serum合成器基础2-主面板">Serum合成器基础2-主面板</a><time datetime="2024-03-30T19:12:42.000Z" title="Created 2024-03-30 15:12:42">2024-03-30</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By Dirnot</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.0.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
